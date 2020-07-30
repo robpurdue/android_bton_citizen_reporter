@@ -5,6 +5,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.google.firebase.firestore.FirebaseFirestore
 import edu.elliott.btoncitizenreports.databinding.ActivityReportBinding
 import kotlin.random.Random
@@ -36,11 +39,11 @@ class ReportActivity : AppCompatActivity() {
         binding.reportTextView.text = makeReportDescription()
 
         // SET CLICK LISTENERS FOR BUTTONS
-        binding.injury.setOnClickListener { writeToFirestore("injury") }
-        binding.line.setOnClickListener { writeToFirestore("line") }
-        binding.outage.setOnClickListener { writeToFirestore("outage") }
-        binding.fire.setOnClickListener { writeToFirestore("fire") }
-        binding.blocked.setOnClickListener { writeToFirestore("blocked") }
+        binding.injury.setOnClickListener { showBasicDialog("injury") }
+        binding.line.setOnClickListener { showBasicDialog("line") }
+        binding.outage.setOnClickListener { showBasicDialog("outage") }
+        binding.fire.setOnClickListener { showBasicDialog("fire") }
+        binding.blocked.setOnClickListener { showBasicDialog("blocked") }
 
         Log.d(TAG, latitude!!)
         Log.d(TAG, longitude!!)
@@ -95,6 +98,29 @@ class ReportActivity : AppCompatActivity() {
                 Log.w(TAG, "Error adding document", e)
             }
 
+    }
+
+    fun showBasicDialog(reportType: String) {
+        //1
+        val builder = AlertDialog.Builder(this)
+        //2
+        builder.setTitle("Submit Report?")
+        builder.setMessage("Are you sure you want to submit this report?")
+        //1
+        builder.setPositiveButton("Yes") { dialog, which ->
+            writeToFirestore(reportType)
+            Toast.makeText(applicationContext, "Report Submitted!", Toast.LENGTH_LONG).show()
+            // Send user back to the map
+            val intent = Intent(this, MapsActivity::class.java)
+            startActivity(intent)
+        }
+        //3
+        builder.setNegativeButton("Cancel") { dialog, which ->
+            //4
+            Toast.makeText(applicationContext, "Report Canceled", Toast.LENGTH_LONG).show()
+        }
+        //3
+        builder.show()
     }
 
     companion object {

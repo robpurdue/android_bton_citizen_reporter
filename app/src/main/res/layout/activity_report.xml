@@ -6,6 +6,8 @@
     android:layout_height="wrap_content"
     tools:context=".ReportActivity">
 
+
+    <!-- USE FITS SYSTEM WINDOWS TO KEEP THE LAYOUT FROM RUNNING UNDER THE APP BAR -->
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="match_parent"
@@ -16,7 +18,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        <!-- USE FITS SYSTEM WINDOWS TO KEEP THE LAYOUT FROM RUNNING UNDER THE APP BAR -->
         android:fitsSystemWindows="true">
 
         <TextView
@@ -30,27 +31,33 @@
             android:padding="15dp" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/injury"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Personal Injury" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/line"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Downed Power Line" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/outage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Power Outage" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/fire"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Fire" />
+
+        <Button
+            android:id="@+id/blocked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blocked Roadway" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

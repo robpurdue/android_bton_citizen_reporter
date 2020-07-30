@@ -1,0 +1,75 @@
+{
+  "project_info": {
+    "project_number": "945848221769",
+    "firebase_url": "https://su20-i516-final-eoc.firebaseio.com",
+    "project_id": "su20-i516-final-eoc",
+    "storage_bucket": "su20-i516-final-eoc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945848221769:android:4ebc95ce0f687287a27f98",
+        "android_client_info": {
+          "package_name": "com.example.firestoretestapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945848221769-hji11v1cdab3616bs8r9c4obh1cqiuqk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoTOyjC9eSbfxuPjsTTlIQmzqxXZcxTMA"
+        },
+        {
+          "current_key": "AIzaSyDO8rOpGS0z1gvY4hQgVbU2iXYb8v74LXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945848221769-hji11v1cdab3616bs8r9c4obh1cqiuqk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945848221769:android:9f952b7512ffe0f7a27f98",
+        "android_client_info": {
+          "package_name": "edu.elliott.btoncitizenreports"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945848221769-hji11v1cdab3616bs8r9c4obh1cqiuqk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoTOyjC9eSbfxuPjsTTlIQmzqxXZcxTMA"
+        },
+        {
+          "current_key": "AIzaSyDO8rOpGS0z1gvY4hQgVbU2iXYb8v74LXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945848221769-hji11v1cdab3616bs8r9c4obh1cqiuqk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
